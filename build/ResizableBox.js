@@ -57,7 +57,7 @@ var ResizableBox = module.exports = React.createClass({
 
     this.setState({ width: width, height: height }, function () {
       if (_this.props.onResize) {
-        _this.props.onResize(event, { element: element, size: size });
+        _this.props.onResize(event, { element: element, size: { width: width, height: height } });
       }
     });
   },
